@@ -81,3 +81,57 @@ ul.mainNavMenu a:hover, .selected a{
 	color: #000;
 	text-decoration: none;
 }
+
+/*=Table layout*/
+	/*The listTable is intended for tables that will show a list of objects, as in a table that shows stuff from the db*/
+.listTable {
+	border-collapse: collapse;
+	border: 1px solid #666;
+	empty-cells: show;
+	width: 100%;
+}
+
+.listTable th,.listTable td {
+	padding: 0.1em 1em;
+}
+
+.listTable caption {
+	font-size: 1.2em;
+	font-weight: bold;
+	margin: 1em 0;
+}
+	
+.listTable thead {
+	background: #ccc url(/static/images/bar.gif) repeat-x left center;
+	border-top: 1px solid #a5a5a5;
+	border-bottom: 1px solid #a5a5a5;
+}
+
+.listTable th {
+	font-weight: normal;
+	text-align: center;
+}
+
+.listTable td {
+	border-right: 1px solid #ccc;
+}
+
+.listTable tr:nth-child(odd) {
+	background-color: #edf5ff;
+}
+
+/*For compatibility with browsers that don't support CSS3:*/
+.odd {
+	background-color: #edf5ff;
+}
+
+.listTable tr:hover {
+	background-color: #336699;
+	color: #fff;
+}
+
+.listTable thead tr:hover {
+	background-color: transparent;
+	color: inherit;
+}
+
