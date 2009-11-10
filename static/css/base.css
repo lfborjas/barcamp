@@ -1,0 +1,58 @@
+#branding{
+	background-color: #007BB4;
+}
+
+#content{
+	width: 520px:
+	float: right;
+}
+
+#content p, #content h1{
+	padding-right: 20px;
+}
+
+#mainNav{
+	width: 200px;
+	float: left;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#mainNav li{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#footer{
+	clear: both;
+}
+
+
+
+
+ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+ul a{
+	display: block;
+	width: 200px;
+	height: 39px;
+	line-height: 39px;
+	color: #000;
+	text-decoration: none;
+	background: #94B8E9 url(/static/images/pixy-rollover.gif) left bottom;
+	text-indent: 50px;
+}
+
+li.first a{
+	height: 40px;
+	line-height: 40px;
+}
+
+a:hover .selected a{
+	background-position:right bottom;
+	color #fff;
+}

@@ -1,0 +1,41 @@
+{#{%use i18n%}#}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+                <meta name="description" content="Esta es una página de muestra para el barcamp  " />
+        <title>{% block title %}{%if title%}{{title}} | {%endif%}{% endblock %}  Barcamp</title>
+
+        <link rel="stylesheet" href="/static/css/base.css" type="text/css" media="screen" />
+        {% block head %}
+		{#las que hereden importarán aquí su contenido estático#}		
+        {% endblock %}  
+    </head>
+
+<body>
+<div id="wrapper">
+	<div id="branding">
+		<h1>¡Hola Mundo!</h1>
+	</div>
+	
+	<div id="content">
+	{% block content %}
+		<p>Podría poner aquí un lorem ipsum. Pero quiero que veamos un poco de internacionalización</p>
+	{%endblock%}
+	</div>
+
+	<div id="mainNav">
+		<ul id="mainNavMenu">	
+			<li class="first"><a href="/blogs/">Blogs</a>
+			<li><a href="/webcomics/">Webcomics</a>
+		</ul>
+	</div>
+
+	<div id="footer">
+		<p class="litteprint">Barcamp, Noviembre 2009</p>
+	</div>
+</div>
+</body>
+
