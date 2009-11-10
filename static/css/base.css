@@ -1,14 +1,33 @@
+body{
+	font-family:"Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+	font-size:12px;
+}
+
 #branding{
 	background-color: #007BB4;
 }
 
 #content{
-	width: 520px;
+	width: 820px;
 	float: right;
 }
 
-#content p, #content h1{
+#mainContent p, #mainContent h1, #secondaryContent p, #secondaryContent h1, #secondaryContent li, #secondaryContent h3{
+	padding-left: 20px;
 	padding-right: 20px;
+}
+
+#mainContent{
+	font-size: 24px;
+	width: 320px;
+	float: left;
+}
+
+#secondaryContent{
+	background-color: #5B80B2;
+	font-size: 10px;
+	width: 180px;
+	float: right;
 }
 
 #mainNav{
@@ -30,13 +49,13 @@
 
 
 
-ul{
+ul.mainNavMenu {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
 }
 
-ul a{
+ul.mainNavMenu a{
 	display: block;
 	width: 200px;
 	height: 39px;
@@ -52,7 +71,13 @@ li.first a{
 	line-height: 40px;
 }
 
-a:hover .selected a{
+ul.mainNavMenu a:hover, .selected a{
 	background-position:right bottom;
 	color #fff;
+}
+
+#branding a{
+	font-size: 30px;
+	color: #000;
+	text-decoration: none;
 }
