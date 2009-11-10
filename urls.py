@@ -6,24 +6,26 @@ from django.views.generic.create_update import create_object
 from sitios.models import Sitio
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
- admin.autodiscover()
+admin.autodiscover()
 
 webcomics_info={
-	'queryset': Sitio.objects.filter(tipo='WC')
+	'queryset': Sitio.objects.filter(tipo='WC'),
+	'extra_context': {'objeto': 'webcomics'}
 }
 
 blogs_info={
-	'queryset': Sitio.objects.filter(tipo='B') 
+	'queryset': Sitio.objects.filter(tipo='B') ,
+	'extra_context': {'objeto': 'blogs'}
 }
 
 
 urlpatterns = patterns('',
     # Example:
-     (r'^$', 'direct_to_template', {'template': 'base.html'})
-     (r'^webcomics/$', 'object_list',webcomics_info),
-     (r'^blogs/$', 'object_list', blogs_info),
-     (r'^webcomics/nuevo/$', 'create_object', {'model': Sitio, 'post_save_redirect': '/webcomics/'})	
-     (r'^blogs/nuevo/$', 'create_object', {'model': Sitio, 'post_save_redirect': '/blogs/'})	
+     (r'^$', direct_to_template, {'template': 'base.html'}),
+     (r'^webcomics/$', object_list,webcomics_info),
+     (r'^blogs/$', object_list, blogs_info),
+     (r'^webcomics/nuevo/$', create_object, {'model': Sitio, 'post_save_redirect': '/webcomics/'}),	
+     (r'^blogs/nuevo/$', create_object, {'model': Sitio, 'post_save_redirect': '/blogs/'}),
 	
 	
      

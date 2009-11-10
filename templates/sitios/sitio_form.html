@@ -1,10 +1,13 @@
 {%extends "base.html"%}
-{%block title%} Sitios | Barcamp {%endblock%}
+{%block title%} Sitios {%endblock%}
 {%block head%}
 	{{form.media}}
 {%endblock%}
 {%block content%}
-	{{form}}
+	<form action="" method="POST">	
+		{{form.as_p}}
+		<input type="submit" value="Guardar" />
+	</form>
 {%endblock%}
 
 

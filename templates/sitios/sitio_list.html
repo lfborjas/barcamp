@@ -1,6 +1,7 @@
 {%extends "base.html"%}
-{%block title%} Todos mis sitios | Barcamp {%endblock%}
+{%block title%} Todos mis sitios | {%endblock%}
 {%block content%}
 	{{object_list}}
+	<a href="/{{objeto}}/nuevo/">Agregar Nuevo</a>	
 {%endblock%}
 
