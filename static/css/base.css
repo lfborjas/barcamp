@@ -60,6 +60,11 @@ body {
 	clear: both;	
 }
 
+#footer ul{
+	margin: 0;
+	padding: 0;
+}
+
 .warning{
 	background-color: #FFE;
 	width: 100%;
