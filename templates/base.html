@@ -1,4 +1,3 @@
-{#{%use i18n%}#}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -18,22 +17,33 @@
 <body>
 <div id="wrapper">
 	<div id="branding">
-		<h1><a href="/">Django Nomada</a></h1>
+		<h1><a href="/">Django N&oacute;mada</a></h1>
 		
 	</div>
 	
 	<div id="content">
 		<div id="mainContent">
 		{% block content %}
-			<p>Podría poner aquí un lorem ipsum. Pero quiero que veamos un poco de internacionalización</p>
+			<h2>Parte 2: Unos meses después...</h2>
+			<p><small></>Nuestra aplicación ha cambiado con el tiempo: usamos generic views donde se puede, 
+			nuestro URLConf está lleno de expresiones regulares estrambóticas, usamos forms a partir de modelos, servimos datos estáticos...
+			Pero, ¿qué pasa cuando nos tenemos que replantear cuestiones difíciles de diseño a medio camino? Como, por ejemplo, hacer cambios en
+			el esquema de base de datos: poner o quitar campos, tablas, cambiar el tipo de los campos. Respecto a eso
+			¿Qué tan mágico es django?</small></p>
+			
+			
 		{%endblock%}
 		</div>
 		<div id="secondaryContent">
 			<h3>Temas a tratar</h3>
-			<ul>
-				<li>Internacionalización</li>
+			<ul>				
 				<li>Migraciones</li>				
-				<li>Vistas Genéricas</li>
+				<li>Vistas Genéricas y otras curiosidades</li>
+			</ul>
+			<h3>Información de contacto</h3>
+			<ul>
+				<li>luis.borjas@escolarea.com</li>
+				<li>@lfborjas</li>
 			</ul>
 		</div>
 	</div>
@@ -45,6 +55,9 @@
 	</div>
 
 	<div id="footer">
+		<div class="warning">
+		<small>El código fuente de esta aplicación está disponible via git: <br /><code>git clone git://github.com/lfborjas/barcamp.git<code/></small>
+		</div>	
 	</div>
 </div>
 </body>

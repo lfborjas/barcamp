@@ -1,12 +1,12 @@
 {%extends "base.html"%}
-{%block title%} Todos mis sitios | {%endblock%}
+{%block title%} Entradas para {{nombre_sitio}} | {%endblock%}
 {%block content%}
 	{%if object_list%}
 	<table class="listTable">
 	<thead>
 		<tr>
-			<th>Sitio</th>
-			<th>&nbsp</th>
+			<th>T&iacute;tulo</th>
+			<th>Autor</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -16,14 +16,13 @@
 		{%else%}
 			<tr>
 		{%endif%}
-			<td><a href="{{object.direccion}}">{{object.nombre}}</a></td>
-			<td><a href="/{{objeto}}/{{object.pk}}/entradas/">Entradas</a></td>
+			<td><a href="{{object.direccion}}">{{object.titulo}}</a></td>
+			<td>{{object.autor|default:"No especificado"}}</td>
 		</tr>
 	{%endfor%}
 	</tbody>
 	</table>
 	{%endif%}
 	<br /><br />
-	<a href="/{{objeto}}/nuevo/">Agregar Nuevo</a>	
+	<a href="{{agregar_a}}">Agregar Nueva</a>	
 {%endblock%}
-

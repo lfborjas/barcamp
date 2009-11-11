@@ -26,6 +26,12 @@ urlpatterns = patterns('',
      (r'^blogs/$', object_list, blogs_info),
      (r'^webcomics/nuevo/$', create_object, {'model': Sitio, 'post_save_redirect': '/webcomics/'}),	
      (r'^blogs/nuevo/$', create_object, {'model': Sitio, 'post_save_redirect': '/blogs/'}),
+     #uso de una wrapper para una generic view:
+     #(r'^webcomics/(?P<id>\d+)/entradas/', 'sitios.views.ver_entradas', {'tipo': 'WC'}),     
+     (r'^(?P<tipo>\w+)/(?P<id_sitio>\d+)/entradas/$', 'sitios.views.ver_entradas'),
+     #una view normal:
+     #(r'^webcomics/(?P<id>\d+)/entradas/nueva/', 'sitios.views.agregar_entradas'),
+     (r'^(?P<tipo>\w+)/(?P<id_sitio>\d+)/entradas/nueva/$', 'sitios.views.agregar_entrada'),
 	
 	
      
@@ -36,6 +42,9 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
      (r'^admin/', include(admin.site.urls)),
+    #Para tener disponibles las traducciones de javascript de admin:
+     (r'^my_admin/jsi18n', 'django.views.i18n.javascript_catalog'),
+
 )
 
 if settings.DEBUG:

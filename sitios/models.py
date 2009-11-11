@@ -26,7 +26,7 @@ class Entrada(models.Model):
 	autor=models.CharField(max_length=200, blank=True)
 	direccion=models.URLField()
 	#y si la fecha de salida importa?
-	#fecha_pub=models.DateField(auto_now_add=True)
+	fecha_pub=models.DateField(auto_now_add=True)
 	
 	def __unicode__(self):
 		return self.direccion

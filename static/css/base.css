@@ -1,53 +1,70 @@
-body{
-	font-family:"Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
-	font-size:12px;
+body {
+	font-family: "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans",
+		Verdana, Arial, sans-serif;
+	font-size: 12px;
 }
 
-#branding{
+#branding {
 	background-color: #007BB4;
 }
 
-#content{
+#content {
 	width: 820px;
 	float: right;
 }
 
-#mainContent p, #mainContent h1, #secondaryContent p, #secondaryContent h1, #secondaryContent li, #secondaryContent h3{
+#mainContent p,#mainContent h1,#secondaryContent p,#secondaryContent h1,#secondaryContent li,#secondaryContent h3
+	{
 	padding-left: 20px;
 	padding-right: 20px;
 }
 
-#mainContent{
+#mainContent {
 	font-size: 24px;
-	width: 320px;
+	width: 620px;
 	float: left;
 }
 
-#secondaryContent{
+#mainContent p{
+	text-align:justify;
+}
+
+#secondaryContent {
 	background-color: #5B80B2;
 	font-size: 10px;
-	width: 180px;
+	width: 190px;
+	height: 100%;
 	float: right;
 }
 
-#mainNav{
+#secondaryContent ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+#mainNav {
 	width: 200px;
 	float: left;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
-#mainNav li{
+#mainNav li {
 	padding-left: 20px;
 	padding-right: 20px;
 }
 
-#footer{
-	clear: both;
+#footer {	
+	padding-top: 50px;
+	text-align: center;
+	clear: both;	
 }
 
-
-
+.warning{
+	background-color: #FFE;
+	width: 100%;
+	border: 1px solid #FF0;
+}
 
 ul.mainNavMenu {
 	margin: 0;
@@ -55,7 +72,7 @@ ul.mainNavMenu {
 	list-style-type: none;
 }
 
-ul.mainNavMenu a{
+ul.mainNavMenu a {
 	display: block;
 	width: 200px;
 	height: 39px;
@@ -66,17 +83,18 @@ ul.mainNavMenu a{
 	text-indent: 50px;
 }
 
-li.first a{
+li.first a {
 	height: 40px;
 	line-height: 40px;
 }
 
-ul.mainNavMenu a:hover, .selected a{
-	background-position:right bottom;
-	color #fff;
+ul.mainNavMenu a:hover,.selected a {
+	background-position: right bottom;
+	color
+	#fff;
 }
 
-#branding a{
+#branding a {
 	font-size: 30px;
 	color: #000;
 	text-decoration: none;
@@ -100,7 +118,7 @@ ul.mainNavMenu a:hover, .selected a{
 	font-weight: bold;
 	margin: 1em 0;
 }
-	
+
 .listTable thead {
 	background: #ccc url(/static/images/bar.gif) repeat-x left center;
 	border-top: 1px solid #a5a5a5;
@@ -125,13 +143,39 @@ ul.mainNavMenu a:hover, .selected a{
 	background-color: #edf5ff;
 }
 
-.listTable tr:hover {
+/*.listTable tr:hover {
 	background-color: #336699;
 	color: #fff;
-}
+}*/
 
 .listTable thead tr:hover {
 	background-color: transparent;
 	color: inherit;
 }
 
+/*Para los forms*/
+ul.errorlist {	
+	margin:0;
+	padding: 0;
+}
+
+.errorlist li {
+	background-color: red;
+	color: white;
+	display: block;
+	font-size: 10px;
+	margin: 0 0 3px;
+	padding: 4px 5px;
+}
+
+
+
+label{
+	
+	width: 10em;
+}
+
+a:link, a:visited {
+	color:#5B80B2;
+	text-decoration:none;
+}
