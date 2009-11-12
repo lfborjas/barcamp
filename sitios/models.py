@@ -29,9 +29,9 @@ class Entrada(models.Model):
 	sitio=models.ForeignKey(Sitio)
 	titulo=models.CharField(max_length=200, blank=True)
 	#Y si nos importase tener autores?
-	autor=models.CharField(max_length=200, blank=True)
+	#autor_viejo=models.CharField(max_length=200, blank=True)
 	#le ponemos un nombre temporal:
-	autor_fk=models.ForeignKey(Autor)
+	autor=models.ForeignKey(Autor)
 	direccion=models.URLField()
 	#y si la fecha de salida importa?
 	fecha_pub=models.DateField(auto_now_add=True)
