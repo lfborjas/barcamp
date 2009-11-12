@@ -17,7 +17,7 @@
 			<tr>
 		{%endif%}
 			<td><a href="{{object.direccion}}">{{object.titulo}}</a></td>
-			<td>{{object.autor|default:"No especificado"}}</td>
+			<td>{{object.autor_fk|default:"No especificado"}}</td>
 		</tr>
 	{%endfor%}
 	</tbody>
