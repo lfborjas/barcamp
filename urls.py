@@ -3,7 +3,7 @@ from django.conf import settings
 from django.views.generic.simple import direct_to_template
 from django.views.generic.list_detail import  object_list
 from django.views.generic.create_update import create_object
-from sitios.models import Sitio
+from sitios.models import Sitio, Autor
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
@@ -18,14 +18,20 @@ blogs_info={
 	'extra_context': {'objeto': 'blogs'}
 }
 
+authors_info={
+			  'queryset': Autor.objects.all()			  
+			 }
+
 
 urlpatterns = patterns('',
     # Example:
      (r'^$', direct_to_template, {'template': 'base.html'}),
      (r'^webcomics/$', object_list,webcomics_info),
      (r'^blogs/$', object_list, blogs_info),
+     (r'^autores/$', object_list, authors_info),
      (r'^webcomics/nuevo/$', create_object, {'model': Sitio, 'post_save_redirect': '/webcomics/'}),	
      (r'^blogs/nuevo/$', create_object, {'model': Sitio, 'post_save_redirect': '/blogs/'}),
+     (r'^autores/nuevo/$', create_object, {'model': Autor, 'post_save_redirect': '/autores/'}),
      #uso de una wrapper para una generic view:
      #(r'^webcomics/(?P<id>\d+)/entradas/', 'sitios.views.ver_entradas', {'tipo': 'WC'}),     
      (r'^(?P<tipo>\w+)/(?P<id_sitio>\d+)/entradas/$', 'sitios.views.ver_entradas'),

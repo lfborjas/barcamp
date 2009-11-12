@@ -1,0 +1,13 @@
+{%extends "base.html"%}
+{%block title%} Agregar Autor | {%endblock%}
+{%block head%}
+	{{form.media}}
+{%endblock%}
+{%block content%}
+	<form action="" method="POST">
+		<table>	
+		{{form}}
+		</table>
+		<input type="submit" value="Guardar" />
+	</form>
+{%endblock%}
