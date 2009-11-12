@@ -80,9 +80,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.admin',	
-    'sitios'	
-    #'south'
+    'sitios',	
+    'south'
 )
 
 STATIC_DOC_ROOT=ROOT_PATH+'/static'
-#SOUTH_AUTO_FREEZE_APP = True
+SOUTH_AUTO_FREEZE_APP = True
