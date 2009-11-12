@@ -9,7 +9,8 @@ SITE_CHOICES=(
 class Sitio(models.Model):
 	nombre=models.CharField(max_length=200)
 	direccion=models.URLField()
-	tipo=models.CharField(max_length=200, choices=SITE_CHOICES)	
+	tipo=models.CharField(max_length=200, choices=SITE_CHOICES)
+	tags=models.CharField(max_length=200, blank=True, null=True, default="barcamp")	
 	#tags=somekindofset
 	def __unicode__(self):
 		return self.nombre
@@ -18,12 +19,19 @@ class Sitio(models.Model):
 #	class Meta:
 #		unique_together=("nombre", "direccion")
 
+class Autor(models.Model):
+	nombre=models.CharField(max_length=200)
+	email=models.EmailField(blank=True)
+	def __unicode__(self):
+		 return self.nombre
 
 class Entrada(models.Model):
 	sitio=models.ForeignKey(Sitio)
 	titulo=models.CharField(max_length=200, blank=True)
 	#Y si nos importase tener autores?
-	autor=models.CharField(max_length=200, blank=True)
+	#autor_viejo=models.CharField(max_length=200, blank=True)
+	#le ponemos un nombre temporal:
+	autor=models.ForeignKey(Autor)
 	direccion=models.URLField()
 	#y si la fecha de salida importa?
 	fecha_pub=models.DateField(auto_now_add=True)
