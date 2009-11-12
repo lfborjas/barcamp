@@ -9,7 +9,7 @@ SITE_CHOICES=(
 class Sitio(models.Model):
 	nombre=models.CharField(max_length=200)
 	direccion=models.URLField()
-	tipo=models.CharField(max_length=200, choices=SITE_CHOICES)
+	tipo=models.CharField(max_length=200, choices=SITE_CHOICES)	
 	#tags=somekindofset
 	def __unicode__(self):
 		return self.nombre
