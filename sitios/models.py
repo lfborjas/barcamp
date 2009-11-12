@@ -31,7 +31,7 @@ class Entrada(models.Model):
 	#Y si nos importase tener autores?
 	#autor=models.CharField(max_length=200, blank=True)
 	#le ponemos un nombre temporal:
-	autor_fk=models.ForeignKey(Autor, null=True)
+	autor_fk=models.ForeignKey(Autor, null=True, verbose_name="autor")
 	direccion=models.URLField()
 	#y si la fecha de salida importa?
 	fecha_pub=models.DateField(auto_now_add=True)
